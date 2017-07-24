@@ -12,6 +12,7 @@
 		2A2ACDCF1F2595BC0058AFEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2ACDCD1F2595BC0058AFEA /* Main.storyboard */; };
 		2A2ACDD11F2595BC0058AFEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2ACDD01F2595BC0058AFEA /* Assets.xcassets */; };
 		2A2ACDD41F2595BC0058AFEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2ACDD21F2595BC0058AFEA /* LaunchScreen.storyboard */; };
+		2AA589731F25BAFC007480AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AA589721F25BAFC007480AB /* GoogleService-Info.plist */; };
 		2DFBC2F03A07C708D3F64989 /* Pods_skyclub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B738082F1ED5342149B7DB75 /* Pods_skyclub.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		2A2ACDD01F2595BC0058AFEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A2ACDD31F2595BC0058AFEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A2ACDD51F2595BC0058AFEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2AA589721F25BAFC007480AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		388F6205F5B46D6FD8445A27 /* Pods-skyclub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skyclub.release.xcconfig"; path = "Pods/Target Support Files/Pods-skyclub/Pods-skyclub.release.xcconfig"; sourceTree = "<group>"; };
 		84AC2AEE37430B6DF179C570 /* Pods-skyclub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skyclub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-skyclub/Pods-skyclub.debug.xcconfig"; sourceTree = "<group>"; };
 		B738082F1ED5342149B7DB75 /* Pods_skyclub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_skyclub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 				2A2ACDD01F2595BC0058AFEA /* Assets.xcassets */,
 				2A2ACDD21F2595BC0058AFEA /* LaunchScreen.storyboard */,
 				2A2ACDD51F2595BC0058AFEA /* Info.plist */,
+				2AA589721F25BAFC007480AB /* GoogleService-Info.plist */,
 			);
 			path = skyclub;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A2ACDD41F2595BC0058AFEA /* LaunchScreen.storyboard in Resources */,
+				2AA589731F25BAFC007480AB /* GoogleService-Info.plist in Resources */,
 				2A2ACDD11F2595BC0058AFEA /* Assets.xcassets in Resources */,
 				2A2ACDCF1F2595BC0058AFEA /* Main.storyboard in Resources */,
 			);
@@ -376,6 +380,7 @@
 				2A2ACDDA1F2595BC0058AFEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
