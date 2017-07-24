@@ -16,7 +16,6 @@
 		501EB8B61F25CC8B000D17F2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 501EB8B41F25CAE7000D17F2 /* Info.plist */; };
 		501EB8B81F25CE14000D17F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 501EB8B71F25CE14000D17F2 /* GoogleService-Info.plist */; };
 		501EB8BA1F25D8AC000D17F2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 501EB8B91F25D8AC000D17F2 /* Login.storyboard */; };
-		501EB8BC1F25DE63000D17F2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501EB8BB1F25DE63000D17F2 /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +29,6 @@
 		501EB8B41F25CAE7000D17F2 /* Info.plist */ = {isa = PBXFileReference; explicitFileType = text.plist.info; fileEncoding = 4; path = Info.plist; sourceTree = "<group>"; };
 		501EB8B71F25CE14000D17F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		501EB8B91F25D8AC000D17F2 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		501EB8BB1F25DE63000D17F2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		84AC2AEE37430B6DF179C570 /* Pods-skyclub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skyclub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-skyclub/Pods-skyclub.debug.xcconfig"; sourceTree = "<group>"; };
 		B738082F1ED5342149B7DB75 /* Pods_skyclub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_skyclub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -40,7 +38,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				501EB8BC1F25DE63000D17F2 /* FBSDKLoginKit.framework in Frameworks */,
 				2DFBC2F03A07C708D3F64989 /* Pods_skyclub.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,7 +66,6 @@
 		2A2ACDC81F2595BC0058AFEA /* skyclub */ = {
 			isa = PBXGroup;
 			children = (
-				501EB8BB1F25DE63000D17F2 /* FBSDKLoginKit.framework */,
 				501EB8B31F25CAB0000D17F2 /* Supporting */,
 				501EB8B01F25C9E8000D17F2 /* Controllers */,
 				501EB8AB1F25C9BE000D17F2 /* Storyboards */,
