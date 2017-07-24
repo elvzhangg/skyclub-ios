@@ -63,15 +63,39 @@
 		2A2ACDC81F2595BC0058AFEA /* skyclub */ = {
 			isa = PBXGroup;
 			children = (
-				501EB89E1F25C049000D17F2 /* ViewController.swift */,
-				501EB89F1F25C049000D17F2 /* GoogleService-Info.plist */,
-				501EB8A01F25C049000D17F2 /* Info.plist */,
-				501EB8A11F25C049000D17F2 /* LaunchScreen.storyboard */,
-				501EB8A21F25C049000D17F2 /* Main.storyboard */,
 				2A2ACDC91F2595BC0058AFEA /* AppDelegate.swift */,
+				501EB8AA1F25C3FC000D17F2 /* Supporting Files */,
+				501EB8A91F25C3F1000D17F2 /* Storyboards */,
+				501EB8A81F25C3E2000D17F2 /* View Controllers */,
 				2A2ACDD01F2595BC0058AFEA /* Assets.xcassets */,
 			);
 			path = skyclub;
+			sourceTree = "<group>";
+		};
+		501EB8A81F25C3E2000D17F2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		501EB8A91F25C3F1000D17F2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				501EB89E1F25C049000D17F2 /* ViewController.swift */,
+				501EB8A21F25C049000D17F2 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		501EB8AA1F25C3FC000D17F2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				501EB89F1F25C049000D17F2 /* GoogleService-Info.plist */,
+				501EB8A01F25C049000D17F2 /* Info.plist */,
+				501EB8A11F25C049000D17F2 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		863DC09A7A3C480501D6667E /* Frameworks */ = {
