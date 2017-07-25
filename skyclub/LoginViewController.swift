@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseAuthUI
+import FirebaseFacebookAuthUI
 
 class LoginViewController: UIViewController {
 
@@ -23,6 +24,7 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*

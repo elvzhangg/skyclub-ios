@@ -10,6 +10,9 @@ target 'skyclub' do
   pod 'FirebaseUI/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FirebaseUI/Facebook'
 
 end
 
