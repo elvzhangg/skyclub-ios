@@ -37,7 +37,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
             return
         }
         
-        performSegue(withIdentifier: "didSignIn", sender: nil)
+        performSegue(withIdentifier: "toCreateProfile", sender: nil)
     }
     
 
