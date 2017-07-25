@@ -11,20 +11,25 @@ import FirebaseAuth
 import FirebaseAuthUI
 import FirebaseFacebookAuthUI
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, FUIAuthDelegate {
 
-    @IBAction func loginFacebook(_ sender: Any) {
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func loginFacebook(_ sender: UIButton) {
+        guard let authUI = FUIAuth.defaultAuthUI()
+            else { return }
+        
+        authUI.delegate = self
+        
+        // configure Auth UI for Facebook login
+        let providers: [FUIAuthProvider] = [FUIFacebookAuth()]
+        authUI.providers = providers
+        
+        let authViewController = authUI.authViewController()
+        present(authViewController, animated: true)
     }
     
+    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+        performSegue(withIdentifier: "didSignIn", sender: nil)
+    }
     
 
     /*

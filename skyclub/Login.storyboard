@@ -44,6 +44,9 @@
                             <constraint firstItem="lCc-jg-MW2" firstAttribute="top" secondItem="VJ1-1L-Zj1" secondAttribute="bottom" constant="170" id="xvi-hV-ZeF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="GNr-Jo-cGi" kind="show" identifier="didSignIn" id="r9A-nQ-8wc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tjp-Fc-NzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
