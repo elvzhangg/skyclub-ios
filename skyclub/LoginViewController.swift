@@ -11,6 +11,8 @@ import FirebaseAuth
 import FirebaseAuthUI
 import FirebaseFacebookAuthUI
 
+typealias FIRUser = FirebaseAuth.User
+
 class LoginViewController: UIViewController, FUIAuthDelegate {
 
     @IBAction func loginFacebook(_ sender: UIButton) {
@@ -27,7 +29,11 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
         present(authViewController, animated: true)
     }
     
-    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+    func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
+        guard let firuser = user, error == nil else {
+            print("Sign in error")
+            return
+        }
         performSegue(withIdentifier: "didSignIn", sender: nil)
     }
     
