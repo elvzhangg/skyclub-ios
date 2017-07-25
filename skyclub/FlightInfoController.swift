@@ -19,14 +19,5 @@ class FlightInfoController: UIViewController {
         // for now, simply defining the method is sufficient.
         // we'll add code later
     }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let identifier = segue.identifier {
-        if identifier == "back" {
-            print("back button tapped")
-        } else {
-            print ("back button wasn't tapped")
-        }
-    }
-    
-    }
+  
 }
