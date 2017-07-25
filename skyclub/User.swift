@@ -11,8 +11,6 @@ import UIKit
 import FirebaseDatabase
 import UIKit
 import FirebaseDatabase.FIRDataSnapshot
-
-struct User{
     
 class User: NSObject {
     
@@ -81,10 +79,10 @@ class User: NSObject {
         super.init()
     }
 }
+    
 extension User: NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
-        aCoder.encode(name, forKey: Constants.UserDefaults.name)
-    }
+        aCoder.encode(username, forKey: Constants.UserDefaults.name)
     }
 }
