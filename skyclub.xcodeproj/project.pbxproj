@@ -11,6 +11,7 @@
 		2A2ACDD11F2595BC0058AFEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2ACDD01F2595BC0058AFEA /* Assets.xcassets */; };
 		2AA5897D1F26F0EE007480AB /* FlightInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5897C1F26F0EE007480AB /* FlightInfoController.swift */; };
 		2DFBC2F03A07C708D3F64989 /* Pods_skyclub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B738082F1ED5342149B7DB75 /* Pods_skyclub.framework */; };
+		50195D241F2710FF00F8E3D7 /* Flights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50195D231F2710FF00F8E3D7 /* Flights.swift */; };
 		501EB8AD1F25C9D3000D17F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 501EB8AC1F25C9D3000D17F2 /* LaunchScreen.storyboard */; };
 		501EB8AF1F25C9DE000D17F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 501EB8AE1F25C9DE000D17F2 /* Main.storyboard */; };
 		501EB8B21F25CA08000D17F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501EB8B11F25CA08000D17F2 /* LoginViewController.swift */; };
@@ -18,6 +19,7 @@
 		501EB8B81F25CE14000D17F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 501EB8B71F25CE14000D17F2 /* GoogleService-Info.plist */; };
 		501EB8BA1F25D8AC000D17F2 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 501EB8B91F25D8AC000D17F2 /* Login.storyboard */; };
 		501EBAB71F25EC06000D17F2 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501EBAB61F25EC06000D17F2 /* FBSDKLoginKit.framework */; };
+		50A265E11F270BF000DDDA06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A265E01F270BF000DDDA06 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		2A2ACDD01F2595BC0058AFEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AA5897C1F26F0EE007480AB /* FlightInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInfoController.swift; sourceTree = "<group>"; };
 		388F6205F5B46D6FD8445A27 /* Pods-skyclub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skyclub.release.xcconfig"; path = "Pods/Target Support Files/Pods-skyclub/Pods-skyclub.release.xcconfig"; sourceTree = "<group>"; };
+		50195D231F2710FF00F8E3D7 /* Flights.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flights.swift; sourceTree = "<group>"; };
 		501EB8AC1F25C9D3000D17F2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		501EB8AE1F25C9DE000D17F2 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		501EB8B11F25CA08000D17F2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -33,6 +36,7 @@
 		501EB8B71F25CE14000D17F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		501EB8B91F25D8AC000D17F2 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		501EBAB61F25EC06000D17F2 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		50A265E01F270BF000DDDA06 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		84AC2AEE37430B6DF179C570 /* Pods-skyclub.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skyclub.debug.xcconfig"; path = "Pods/Target Support Files/Pods-skyclub/Pods-skyclub.debug.xcconfig"; sourceTree = "<group>"; };
 		B738082F1ED5342149B7DB75 /* Pods_skyclub.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_skyclub.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +75,7 @@
 		2A2ACDC81F2595BC0058AFEA /* skyclub */ = {
 			isa = PBXGroup;
 			children = (
+				50A265DF1F270BDE00DDDA06 /* Data */,
 				501EB8B31F25CAB0000D17F2 /* Supporting */,
 				501EB8B01F25C9E8000D17F2 /* Controllers */,
 				501EB8AB1F25C9BE000D17F2 /* Storyboards */,
@@ -106,6 +111,15 @@
 				501EB8B41F25CAE7000D17F2 /* Info.plist */,
 			);
 			name = Supporting;
+			sourceTree = "<group>";
+		};
+		50A265DF1F270BDE00DDDA06 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				50A265E01F270BF000DDDA06 /* User.swift */,
+				50195D231F2710FF00F8E3D7 /* Flights.swift */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		863DC09A7A3C480501D6667E /* Frameworks */ = {
@@ -252,7 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50A265E11F270BF000DDDA06 /* User.swift in Sources */,
 				2AA5897D1F26F0EE007480AB /* FlightInfoController.swift in Sources */,
+				50195D241F2710FF00F8E3D7 /* Flights.swift in Sources */,
 				501EB8B21F25CA08000D17F2 /* LoginViewController.swift in Sources */,
 				2A2ACDCA1F2595BC0058AFEA /* AppDelegate.swift in Sources */,
 			);

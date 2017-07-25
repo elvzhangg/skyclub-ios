@@ -36,6 +36,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
             print("Sign in error")
             return
         }
+        
         performSegue(withIdentifier: "didSignIn", sender: nil)
     }
     
