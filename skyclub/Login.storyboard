@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OWr-4T-wbw">
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OWr-4T-wbw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
@@ -25,7 +24,6 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJ1-1L-Zj1">
                                 <rect key="frame" x="55.5" y="446" width="264" height="51"/>
-                                <rect key="frame" x="56" y="446" width="264" height="51"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="OhY-M8-c0v"/>
@@ -47,7 +45,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="GNr-Jo-cGi" kind="show" identifier="didSignIn" id="r9A-nQ-8wc"/>
                         <segue destination="Wo7-LC-7T8" kind="show" identifier="toCreateProfile" id="rWY-8S-2ro"/>
                     </connections>
                 </viewController>
@@ -134,8 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRj-L2-Uym" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932" y="179.46026986506749"/>
-            <point key="canvasLocation" x="1775" y="180"/>
+            <point key="canvasLocation" x="1882" y="179"/>
         </scene>
         <!--Edit Your Information View Controller-->
         <scene sceneID="B8j-Y5-kIo">
@@ -150,7 +146,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="ugL-Es-meg">
-                                <rect key="frame" x="35" y="45" width="305" height="146"/>
+                                <rect key="frame" x="35" y="45" width="305" height="145.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Your Infomation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U1u-5b-y0G">
                                         <rect key="frame" x="0.0" y="0.0" width="305" height="27"/>
@@ -159,16 +155,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="1HH-G9-Q1V">
-                                        <rect key="frame" x="0.0" y="45" width="305" height="101"/>
+                                        <rect key="frame" x="0.0" y="45" width="305" height="100.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit your infomation so others can know you better" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOq-2u-OPh">
-                                                <rect key="frame" x="0.0" y="0.0" width="294" height="39"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="294" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1kI-il-TA9">
-                                                <rect key="frame" x="0.0" y="57" width="305" height="44"/>
+                                                <rect key="frame" x="0.0" y="56.5" width="305" height="44"/>
                                                 <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="WTl-DM-JMS"/>
@@ -243,7 +239,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMf-BP-JFb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="180"/>
+            <point key="canvasLocation" x="1012" y="180"/>
         </scene>
     </scenes>
     <resources>

@@ -84,6 +84,7 @@ class User: NSObject {
 extension User: NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
-        aCoder.encode(username, forKey: Constants.UserDefaults.name)
+        aCoder.encode(name, forKey: Constants.UserDefaults.name)
+    }
     }
 }
