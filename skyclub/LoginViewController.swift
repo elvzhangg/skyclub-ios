@@ -20,6 +20,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
             else { return }
         
         authUI.delegate = self
+        authUI.isSignInWithEmailHidden = true
         
         // configure Auth UI for Facebook login
         let providers: [FUIAuthProvider] = [FUIFacebookAuth()]
@@ -28,6 +29,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
         let authViewController = authUI.authViewController()
         present(authViewController, animated: true)
     }
+    
     
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
         guard let firuser = user, error == nil else {
