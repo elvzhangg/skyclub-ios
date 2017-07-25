@@ -12,6 +12,6 @@ import FirebaseDatabase
 import FirebaseDatabase.FIRDataSnapshot
 
 struct User{
-    let id:
+    
 }
 

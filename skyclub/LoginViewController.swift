@@ -16,6 +16,8 @@ typealias FIRUser = FirebaseAuth.User
 class LoginViewController: UIViewController, FUIAuthDelegate {
 
     @IBAction func loginFacebook(_ sender: UIButton) {
+        
+        
         guard let authUI = FUIAuth.defaultAuthUI()
             else { return }
         

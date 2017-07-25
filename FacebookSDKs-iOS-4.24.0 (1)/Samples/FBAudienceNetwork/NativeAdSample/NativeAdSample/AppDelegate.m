@@ -42,7 +42,23 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     return handled;
 }
     
-    
+FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+loginButton.readPermissions = @[@”email”];
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    if ([FBSDKAccessToken currentAccessToken]) {
+        // TODO:Token is already available.
+    }
+}
+// ....
+FBSDKLoginManager *loginManager = [[FBSDKLoginManager alloc] init];
+[loginManager logInWithReadPermissions:@[@"email"]
+                    fromViewController:self
+                               handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+                                   //TODO: process error or result
+                               }];
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
