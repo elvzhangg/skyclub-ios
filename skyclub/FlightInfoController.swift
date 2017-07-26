@@ -36,7 +36,7 @@ class FlightInfoController: UIViewController {
         let dateFormatter = DateFormatter()
         
         dateFormatter.dateStyle = DateFormatter.Style.short
-        dateFormatter.timeStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.none
         dateTextField.text = dateFormatter.string(from: sender.date)
         
     }
@@ -52,6 +52,11 @@ class FlightInfoController: UIViewController {
             }
         })
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
     
   
 }

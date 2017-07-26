@@ -99,8 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				501EB8AC1F25C9D3000D17F2 /* LaunchScreen.storyboard */,
-				501EB8AE1F25C9DE000D17F2 /* Main.storyboard */,
 				501EB8B91F25D8AC000D17F2 /* Login.storyboard */,
+				501EB8AE1F25C9DE000D17F2 /* Main.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
