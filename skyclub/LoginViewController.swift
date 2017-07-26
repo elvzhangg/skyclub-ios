@@ -46,7 +46,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
                 self.performSegue(withIdentifier: "toCreateProfile", sender: nil)
                 return
             }
-            User.setCurrent(user)
+            User.setCurrent(user, writeToUserDefaults: true)
             let mainVC = UIStoryboard.initialViewController(for: .main)
             self.view.window?.rootViewController = mainVC
             self.view.window?.makeKeyAndVisible()

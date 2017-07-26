@@ -16,9 +16,33 @@ class FlightInfoController: UIViewController {
     
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var flightNumberTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let datePicker = UIDatePicker()
+        
+        datePicker.datePickerMode = UIDatePickerMode.date
+        
+        datePicker.addTarget(self, action: #selector(FlightInfoController.datePickerValueChanged(sender:)), for: UIControlEvents.valueChanged)
+        
+        
+        dateTextField.inputView = datePicker
+        
+    }
+    
+    func datePickerValueChanged(sender: UIDatePicker) {
+       
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        dateTextField.text = dateFormatter.string(from: sender.date)
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     @IBAction func searchFlightFriends(_ sender: Any) {
