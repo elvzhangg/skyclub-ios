@@ -24,7 +24,7 @@ class FlightInfoController: UIViewController {
     @IBAction func searchFlightFriends(_ sender: Any) {
         FlightService.create(date: dateTextField.text!, flightNumber: flightNumberTextField.text!, completion: { success in
             if success {
-                self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+                self.performSegue(withIdentifier: "toFindFriends", sender: nil)
             }
         })
     }
