@@ -31,16 +31,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         
-        // 1
-        let storyboard = UIStoryboard(name: "Login", bundle: .main)
+        var initialViewController: UIViewController
         
-        // 2
-        if let initialViewController = storyboard.instantiateInitialViewController() {
-            // 3
-            window?.rootViewController = initialViewController
-            // 4
-            window?.makeKeyAndVisible()
+        if Auth.auth().currentUser != nil,
+        let userData = UserDefaults.standard.data(forKey: Constants.UserDefaults.currentUser),
+        let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
+            // User exists on disk and is authenticated with FB, set current and bypass login
+            User.setCurrent(user)
+            initialViewController = UIStoryboard.initialViewController(for: .main)
+        } else {
+            // User not found on disk or not authenticated, send to login
+            initialViewController = UIStoryboard.initialViewController(for: .login)
         }
+        // Set and show initial view controller
+        window?.rootViewController = initialViewController
+        window?.makeKeyAndVisible()
         
         return true
     }

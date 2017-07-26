@@ -39,8 +39,22 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
             return
         }
         
+        UserService.show(forUID: user.uid) { (user) in
+            if let user = user {
+                // handle existing user
+                User.setCurrent(user, writeToUserDefaults: true)
+                
+                let initialViewController = UIStoryboard.initialViewController(for: .main)
+                self.view.window?.rootViewController = initialViewController
+                self.view.window?.makeKeyAndVisible()
+            } else {
+                // handle new user
+        
         performSegue(withIdentifier: "toCreateProfile", sender: nil)
     }
+}
+}
+}
     
 
     /*
@@ -52,5 +66,3 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
-}

@@ -12,16 +12,6 @@ import FirebaseDatabase
 
 struct UserService {
     
-//    static func show(forUID uid: String, completion: @escaping (User?) -> Void) {
-//        let ref = Database.database().reference().child("users").child(uid)
-//        ref.observeSingleEvent(of: .value, with: { (snapshot) in
-//            /*guard let user = User(uid: snapshot, username: <#String#>, sex : String, age : String) else {
-//                return completion(nil)
-//            }*/
-//            
-//            completion(user)
-//        })
-//    }
     
     static func create(withUID uid: String, name: String, sex: String, age: String, completion: @escaping (User?) -> Void) {
         let dict = ["name": name, "sex": sex, "age": age]
