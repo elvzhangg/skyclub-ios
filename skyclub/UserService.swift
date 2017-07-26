@@ -35,7 +35,7 @@ struct UserService {
                 return completion(nil)
             }
             // Create user from user input
-            let user = User(uid: uid, username: name, sex: sex, age: age)
+            let user = User(uid: uid, name: name, sex: sex, age: age)
             // Return created user to caller
             completion(user)
         }
