@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 import UIKit
-import FirebaseDatabase.FIRDataSnapshot
     
 class User: NSObject {
     
@@ -49,40 +48,41 @@ class User: NSObject {
     
     let uid: String
     let username: String
+    let age: String
+    let sex: String
+    
+    var dictValue: [String: String] {
+        let dict = ["username": username,
+                    "age": age,
+                    "sex": sex]
+        return dict
+    }
+    
     
     // MARK: - Init
     
-    init(uid: String, username: String) {
+    init(uid: String, username: String, sex: String, age: String) {
         self.uid = uid
         self.username = username
+        self.age = age
+        self.sex = sex
         super.init()
     }
+    
+    // init with aCoder
+    
+    // func to encode User
+    
+    // failable init from DataSnapshot
     
     init?(snapshot: DataSnapshot) {
-        guard let dict = snapshot.value as? [String : Any],
-            let username = dict["username"] as? String
-            else { return nil }
-        
+        guard let dict = snapshot as? [String: String],
+        let age = dict["age"] else {
+            return nil
+        }
         self.uid = snapshot.key
-        self.username = username
-        super.init()
-        
-        
+        self.age = age
     }
-    required init?(coder aDecoder: NSCoder){
-        guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
-            let username = aDecoder.decodeObject(forKey: Constants.UserDefaults.name) as? String
-            else {return nil}
-        self.uid = uid
-        self.username = username
-        
-        super.init()
-    }
-}
     
-extension User: NSCoding {
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
-        aCoder.encode(username, forKey: Constants.UserDefaults.name)
-    }
 }
+
