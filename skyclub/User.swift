@@ -47,12 +47,12 @@ class User: NSObject {
     // MARK: - Properties
     
     let uid: String
-    let username: String
+    let name: String
     let age: String
     let sex: String
     
     var dictValue: [String: String] {
-        let dict = ["username": username,
+        let dict = ["name": name,
                     "age": age,
                     "sex": sex]
         return dict
@@ -61,44 +61,50 @@ class User: NSObject {
     
     // MARK: - Init
     
-    init(uid: String, username: String, sex: String, age: String) {
+    init(uid: String, name: String, sex: String, age: String) {
         self.uid = uid
-        self.username = username
+        self.name = name
         self.age = age
         self.sex = sex
         super.init()
     }
     
-    // init with aCoder
-    
-    required init?(coder aDecoder: NSCoder){
-        guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
-            let username = aDecoder.decodeObject(forKey: Constants.UserDefaults.username) as? String,
-            let _ = aDecoder.decodeObject(forKey: Constants.UserDefaults.age) as? String,
-            let _ = aDecoder.decodeObject(forKey: Constants.UserDefaults.sex) as? String
-            else {return nil}
-        self.uid = uid
-        self.username = username
-        self.age = age
-        self.sex = sex
 
-        super.init()
-    }
-
-    
-    // func to encode User
-    
-    
     // failable init from DataSnapshot
-    
     init?(snapshot: DataSnapshot) {
         guard let dict = snapshot as? [String: String],
-        let age = dict["age"] else {
-            return nil
+            let age = dict["age"], let sex = dict["sex"], let name = dict["name"] else {
+                return nil
         }
+        
         self.uid = snapshot.key
         self.age = age
+        self.name = name
+        self.sex = sex
     }
-    
+
+    // init with aCoder
+    required init?(coder aDecoder: NSCoder){
+        guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
+            let name = aDecoder.decodeObject(forKey: Constants.UserDefaults.name) as? String,
+            let age = aDecoder.decodeObject(forKey: Constants.UserDefaults.age) as? String,
+            let sex = aDecoder.decodeObject(forKey: Constants.UserDefaults.sex) as? String
+            else {return nil}
+        self.uid = uid
+        self.name = name
+        self.age = age
+        self.sex = sex
+        super.init()
+    }
 }
+// func to encode User
+extension User: NSCoding {
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
+        aCoder.encode(name, forKey: Constants.UserDefaults.name)
+    }
+}
+
+
+
 
