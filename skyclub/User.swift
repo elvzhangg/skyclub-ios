@@ -71,7 +71,23 @@ class User: NSObject {
     
     // init with aCoder
     
+    required init?(coder aDecoder: NSCoder){
+        guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
+            let username = aDecoder.decodeObject(forKey: Constants.UserDefaults.username) as? String,
+            let _ = aDecoder.decodeObject(forKey: Constants.UserDefaults.age) as? String,
+            let _ = aDecoder.decodeObject(forKey: Constants.UserDefaults.sex) as? String
+            else {return nil}
+        self.uid = uid
+        self.username = username
+        self.age = age
+        self.sex = sex
+
+        super.init()
+    }
+
+    
     // func to encode User
+    
     
     // failable init from DataSnapshot
     

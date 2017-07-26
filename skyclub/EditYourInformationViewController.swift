@@ -29,9 +29,10 @@ class EditYourInformationViewController: UIViewController {
         guard let firUser = Auth.auth().currentUser,
             let username = nameTextField.text,
             !username.isEmpty else { return }
-        ///
+        //
         
-        UserService.create(withUID: firUser.uid, name: username, sex: , age: <#String#>) { (user) in
+        
+        UserService.create(withUID: firUser.uid, name: username, sex: sex , age: age) { (user) in
             guard let user = user else {
                 // handle error
                 return
