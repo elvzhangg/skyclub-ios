@@ -27,19 +27,19 @@ class EditYourInformationViewController: UIViewController {
     
     @IBAction func nextButtonTapped(_ sender: UIButton) {
         guard let firUser = Auth.auth().currentUser,
-            let name = nameTextField.text,
-            let age = ageTextField.text,
-            let sex = sexTextField.text,
-            !name.isEmpty
-            else {
-                return
-        }
-        //
-        
+        let name = nameTextField.text,
+        let age = ageTextField.text,
+        let sex = sexTextField.text,
+        !name.isEmpty,
+        !age.isEmpty,
+        !sex.isEmpty
+            else { return }
         
         UserService.create(withUID: firUser.uid, name: name, sex: sex , age: age) { (user) in
             guard let user = user else {
                 // handle error
+                // TODO
+                print("Not Connected")
                 return
             }
             

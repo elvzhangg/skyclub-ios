@@ -14,10 +14,20 @@ import FirebaseFacebookAuthUI
 
 class FlightInfoController: UIViewController {
     
-    @IBAction func unwindToListNotesViewController(_ segue: UIStoryboardSegue) {
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var flightNumberTextField: UITextField!
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        // for now, simply defining the method is sufficient.
-        // we'll add code later
     }
+    
+    @IBAction func searchFlightFriends(_ sender: Any) {
+        FlightService.create(date: dateTextField.text!, flightNumber: flightNumberTextField.text!, completion: { success in
+            if success {
+                self.performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+            }
+        })
+    }
+    
   
 }

@@ -14,7 +14,9 @@ struct UserService {
     
     
     static func create(withUID uid: String, name: String, sex: String, age: String, completion: @escaping (User?) -> Void) {
-        let dict = ["name": name, "sex": sex, "age": age]
+        let dict = [Constants.UserDefaults.name: name,
+                    Constants.UserDefaults.sex: sex,
+                    Constants.UserDefaults.age: age]
         
         // Write user attributes to database
         let ref = Database.database().reference().child("users").child(uid)

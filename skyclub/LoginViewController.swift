@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import FirebaseAuthUI
 import FirebaseFacebookAuthUI
+import FirebaseDatabase
 
 typealias FIRUser = FirebaseAuth.User
 
@@ -39,21 +40,20 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
             return
         }
         
-        UserService.show(forUID: user.uid) { (user) in
-            if let user = user {
-                // handle existing user
-                User.setCurrent(user, writeToUserDefaults: true)
-                
-                let initialViewController = UIStoryboard.initialViewController(for: .main)
-                self.view.window?.rootViewController = initialViewController
-                self.view.window?.makeKeyAndVisible()
-            } else {
-                // handle new user
-        
-        performSegue(withIdentifier: "toCreateProfile", sender: nil)
+        let ref = Database.database().reference().child("users").child(firuser.uid)
+        ref.observeSingleEvent(of: .value, with: { snapshot in
+            guard let user = User(snapshot: snapshot) else {
+                self.performSegue(withIdentifier: "toCreateProfile", sender: nil)
+                return
+            }
+            User.setCurrent(user)
+            let mainVC = UIStoryboard.initialViewController(for: .main)
+            self.view.window?.rootViewController = mainVC
+            self.view.window?.makeKeyAndVisible()
+        }, withCancel: { error in
+            self.performSegue(withIdentifier: "toCreateProfile", sender: nil)
+        })
     }
-}
-}
 }
     
 

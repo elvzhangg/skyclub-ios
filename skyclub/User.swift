@@ -52,9 +52,9 @@ class User: NSObject {
     let sex: String
     
     var dictValue: [String: String] {
-        let dict = ["name": name,
-                    "age": age,
-                    "sex": sex]
+        let dict = [Constants.UserDefaults.name: name,
+                    Constants.UserDefaults.age: age,
+                    Constants.UserDefaults.sex: sex]
         return dict
     }
     
@@ -72,8 +72,10 @@ class User: NSObject {
 
     // failable init from DataSnapshot
     init?(snapshot: DataSnapshot) {
-        guard let dict = snapshot as? [String: String],
-            let age = dict["age"], let sex = dict["sex"], let name = dict["name"] else {
+        guard let dict = snapshot.value as? [String: String],
+            let age = dict[Constants.UserDefaults.age],
+            let sex = dict[Constants.UserDefaults.sex],
+            let name = dict[Constants.UserDefaults.name] else {
                 return nil
         }
         
@@ -102,6 +104,8 @@ extension User: NSCoding {
     func encode(with aCoder: NSCoder) {
         aCoder.encode(uid, forKey: Constants.UserDefaults.uid)
         aCoder.encode(name, forKey: Constants.UserDefaults.name)
+        aCoder.encode(age, forKey: Constants.UserDefaults.age)
+        aCoder.encode(sex, forKey: Constants.UserDefaults.sex)
     }
 }
 
