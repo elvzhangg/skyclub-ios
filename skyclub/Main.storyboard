@@ -97,7 +97,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tb0-a3-DkW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tb0-a3-DkW" customClass="HeaderCell" customModule="skyclub" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tb0-a3-DkW" id="oV4-cG-XB2">
@@ -127,6 +127,11 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="A6N-uC-IGv" id="5pd-V4-isK"/>
+                                            <outlet property="nameLabel" destination="za9-LH-AJ3" id="QWI-1K-48R"/>
+                                            <outlet property="sexLabel" destination="ugs-t4-Edf" id="tCC-JQ-YYY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
