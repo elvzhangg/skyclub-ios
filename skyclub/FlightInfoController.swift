@@ -59,7 +59,7 @@ class FlightInfoController: UIViewController {
         self.flightNumber = flightNumber
         FlightService.create(date: dateString, flightNumber: flightNumber, completion: { success in
             if success {
-                self.performSegue(withIdentifier: "toFindFriends", sender: nil)
+                self.performSegue(withIdentifier: Constants.Segue.toFindFriends, sender: nil)
             }
         })
     }
@@ -70,7 +70,7 @@ class FlightInfoController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toFindFriends" {
+        if segue.identifier == Constants.Segue.toFindFriends {
             let homeVC = segue.destination as! HomeViewController
             homeVC.flightNumber = self.flightNumber
             homeVC.date = self.dateString

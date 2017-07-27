@@ -125,6 +125,7 @@
 			children = (
 				501EB8B71F25CE14000D17F2 /* GoogleService-Info.plist */,
 				501EB8B41F25CAE7000D17F2 /* Info.plist */,
+				50195D251F27175200F8E3D7 /* Constants.swift */,
 			);
 			name = Supporting;
 			sourceTree = "<group>";
@@ -141,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				50A265E01F270BF000DDDA06 /* User.swift */,
-				50195D251F27175200F8E3D7 /* Constants.swift */,
 				506F189B1F2732BF003CB5EC /* UserService.swift */,
 				5094B2EA1F28705300640D68 /* FlightService.swift */,
 				5094B2EC1F287B5B00640D68 /* FlightInfo.swift */,

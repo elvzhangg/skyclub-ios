@@ -65,7 +65,6 @@
                                 </state>
                                 <connections>
                                     <action selector="searchFlightFriends:" destination="gZs-kb-QKB" eventType="touchUpInside" id="T5g-yb-kDW"/>
-                                    <segue destination="2tX-zA-gnC" kind="show" identifier="toFindFriends" id="CeN-fZ-cVn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -74,6 +73,7 @@
                     <connections>
                         <outlet property="dateTextField" destination="WRR-kJ-UMV" id="l63-Em-af0"/>
                         <outlet property="flightNumberTextField" destination="lNW-pW-Ibq" id="PxX-J1-tDQ"/>
+                        <segue destination="2tX-zA-gnC" kind="show" identifier="toFindFriends" id="txm-gJ-c5s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEf-1e-2VD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,8 +97,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tb0-a3-DkW" customClass="HeaderCell" customModule="skyclub" customModuleProvider="target">
-
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="tb0-a3-DkW" customClass="HeaderCell" customModule="skyclub" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tb0-a3-DkW" id="oV4-cG-XB2">
@@ -129,7 +128,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dateLabel" destination="A6N-uC-IGv" id="5pd-V4-isK"/>
+                                            <outlet property="ageLabel" destination="A6N-uC-IGv" id="11q-7V-0nA"/>
                                             <outlet property="nameLabel" destination="za9-LH-AJ3" id="QWI-1K-48R"/>
                                             <outlet property="sexLabel" destination="ugs-t4-Edf" id="tCC-JQ-YYY"/>
                                         </connections>
