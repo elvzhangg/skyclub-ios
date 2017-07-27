@@ -24,8 +24,8 @@ struct FlightService {
         let ref = Database.database().reference().child("flights").child(date).child(number)
         ref.observeSingleEvent(of: .value, with: { snapshot in
             var userArray = [User]()
-            for snap in snapshot.children {
-                if let user = User(snapshot: snap as! DataSnapshot) {
+            for snap in snapshot.children.allObjects as! [DataSnapshot] {
+                if let user = User(snapshot: snap) {
                     userArray.append(user)
                 }
             }
