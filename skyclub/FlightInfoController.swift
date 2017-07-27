@@ -17,6 +17,9 @@ class FlightInfoController: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var flightNumberTextField: UITextField!
     
+    var dateString: String!
+    var flightNumber: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,9 +38,10 @@ class FlightInfoController: UIViewController {
        
         let dateFormatter = DateFormatter()
         
-        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.dateStyle = DateFormatter.Style.medium
         dateFormatter.timeStyle = DateFormatter.Style.none
-        dateTextField.text = dateFormatter.string(from: sender.date)
+        dateString = dateFormatter.string(from: sender.date)
+        dateTextField.text = dateString
         
     }
     
@@ -46,17 +50,31 @@ class FlightInfoController: UIViewController {
     }
     
     @IBAction func searchFlightFriends(_ sender: Any) {
-        FlightService.create(date: dateTextField.text!, flightNumber: flightNumberTextField.text!, completion: { success in
+        guard let date = dateString,
+        !date.isEmpty,
+        let flightNumber = flightNumberTextField.text,
+        !flightNumber.isEmpty else {
+            return
+        }
+        self.flightNumber = flightNumber
+        FlightService.create(date: dateString, flightNumber: flightNumber, completion: { success in
             if success {
                 self.performSegue(withIdentifier: "toFindFriends", sender: nil)
             }
         })
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toFindFriends" {
+            let homeVC = segue.destination as! HomeViewController
+            homeVC.flightNumber = self.flightNumber
+            homeVC.date = self.dateString
+        }
+    }
   
 }

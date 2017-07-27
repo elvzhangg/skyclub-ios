@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 struct FlightService {
     static func create(date: String, flightNumber: String, completion: @escaping (Bool) -> Void) {
-        let ref = Database.database().reference().child(date).child(flightNumber).child(User.current.uid)
+        let ref = Database.database().reference().child("flights").child(date).child(flightNumber).child(User.current.uid)
         ref.updateChildValues(User.current.dictValue, withCompletionBlock: { error, reference in
             guard error == nil else {
                 return completion(false)
