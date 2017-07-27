@@ -101,7 +101,10 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tb0-a3-DkW">
 =======
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tb0-a3-DkW" customClass="HeaderCell" customModule="skyclub" customModuleProvider="target">
->>>>>>> e18d844d501659fbde5e8cc31b7844533be0677e
+
+=======
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tb0-a3-DkW" customClass="HeaderCell" customModule="skyclub" customModuleProvider="target">
+
                                         <rect key="frame" x="0.0" y="28" width="375" height="49"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tb0-a3-DkW" id="oV4-cG-XB2">
