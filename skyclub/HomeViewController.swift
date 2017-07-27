@@ -17,17 +17,30 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     var flightNumber: String!
     var date: String!
+    var users = [User]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        FlightService.getFlights(forDate: date, andFlightNumber: flightNumber, completion: { users in
+            self.users = users
+        })
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return users.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         return UITableViewCell()
     }
 }

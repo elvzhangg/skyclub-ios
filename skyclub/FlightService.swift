@@ -20,4 +20,17 @@ struct FlightService {
         })
     }
     
+    static func getFlights(forDate date: String, andFlightNumber number: String, completion: @escaping ([User]) -> Void) {
+        let ref = Database.database().reference().child("flights").child(date).child(number)
+        ref.observeSingleEvent(of: .value, with: { snapshot in
+            var userArray = [User]()
+            for snap in snapshot.children {
+                if let user = User(snapshot: snap as! DataSnapshot) {
+                    userArray.append(user)
+                }
+            }
+            completion(userArray)
+        })
+    }
+    
 }

@@ -97,12 +97,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-<<<<<<< HEAD
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tb0-a3-DkW">
-=======
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tb0-a3-DkW" customClass="HeaderCell" customModule="skyclub" customModuleProvider="target">
-
-=======
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tb0-a3-DkW" customClass="HeaderCell" customModule="skyclub" customModuleProvider="target">
 
                                         <rect key="frame" x="0.0" y="28" width="375" height="49"/>
