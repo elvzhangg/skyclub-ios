@@ -10,6 +10,8 @@
 		2A2ACDCA1F2595BC0058AFEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2ACDC91F2595BC0058AFEA /* AppDelegate.swift */; };
 		2A2ACDD11F2595BC0058AFEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2ACDD01F2595BC0058AFEA /* Assets.xcassets */; };
 		2AA5897D1F26F0EE007480AB /* FlightInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5897C1F26F0EE007480AB /* FlightInfoController.swift */; };
+		2AA5899D1F2986EF007480AB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5899C1F2986EF007480AB /* HomeViewController.swift */; };
+		2AA5899F1F298DFD007480AB /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5899E1F298DFD007480AB /* HeaderCell.swift */; };
 		2DFBC2F03A07C708D3F64989 /* Pods_skyclub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B738082F1ED5342149B7DB75 /* Pods_skyclub.framework */; };
 		50195D261F27175200F8E3D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50195D251F27175200F8E3D7 /* Constants.swift */; };
 		50195D281F2719B200F8E3D7 /* EditYourInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50195D271F2719B200F8E3D7 /* EditYourInformationViewController.swift */; };
@@ -31,6 +33,8 @@
 		2A2ACDC91F2595BC0058AFEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A2ACDD01F2595BC0058AFEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2AA5897C1F26F0EE007480AB /* FlightInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInfoController.swift; sourceTree = "<group>"; };
+		2AA5899C1F2986EF007480AB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2AA5899E1F298DFD007480AB /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		388F6205F5B46D6FD8445A27 /* Pods-skyclub.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-skyclub.release.xcconfig"; path = "Pods/Target Support Files/Pods-skyclub/Pods-skyclub.release.xcconfig"; sourceTree = "<group>"; };
 		50195D251F27175200F8E3D7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		50195D271F2719B200F8E3D7 /* EditYourInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditYourInformationViewController.swift; sourceTree = "<group>"; };
@@ -85,8 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				506F189D1F2733ED003CB5EC /* Extensions */,
-				50A265DF1F270BDE00DDDA06 /* Data */,
 				501EB8B31F25CAB0000D17F2 /* Supporting */,
+				50A265DF1F270BDE00DDDA06 /* Data */,
 				501EB8B01F25C9E8000D17F2 /* Controllers */,
 				501EB8AB1F25C9BE000D17F2 /* Storyboards */,
 				2A2ACDC91F2595BC0058AFEA /* AppDelegate.swift */,
@@ -111,6 +115,7 @@
 				50195D271F2719B200F8E3D7 /* EditYourInformationViewController.swift */,
 				501EB8B11F25CA08000D17F2 /* LoginViewController.swift */,
 				2AA5897C1F26F0EE007480AB /* FlightInfoController.swift */,
+				2AA5899C1F2986EF007480AB /* HomeViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 				506F189B1F2732BF003CB5EC /* UserService.swift */,
 				5094B2EA1F28705300640D68 /* FlightService.swift */,
 				5094B2EC1F287B5B00640D68 /* FlightInfo.swift */,
+				2AA5899E1F298DFD007480AB /* HeaderCell.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -291,9 +297,11 @@
 				50A265E11F270BF000DDDA06 /* User.swift in Sources */,
 				2AA5897D1F26F0EE007480AB /* FlightInfoController.swift in Sources */,
 				506F189C1F2732BF003CB5EC /* UserService.swift in Sources */,
+				2AA5899F1F298DFD007480AB /* HeaderCell.swift in Sources */,
 				506F189F1F273415003CB5EC /* Storyboard+Utility.swift in Sources */,
 				5094B2ED1F287B5B00640D68 /* FlightInfo.swift in Sources */,
 				501EB8B21F25CA08000D17F2 /* LoginViewController.swift in Sources */,
+				2AA5899D1F2986EF007480AB /* HomeViewController.swift in Sources */,
 				50195D281F2719B200F8E3D7 /* EditYourInformationViewController.swift in Sources */,
 				2A2ACDCA1F2595BC0058AFEA /* AppDelegate.swift in Sources */,
 				50195D261F27175200F8E3D7 /* Constants.swift in Sources */,
