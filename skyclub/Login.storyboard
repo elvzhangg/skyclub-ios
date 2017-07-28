@@ -38,6 +38,10 @@
                                     <action selector="loginFacebook:" destination="OWr-4T-wbw" eventType="touchUpInside" id="I9d-c6-HdR"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="JmW-y5-IYC">
+                                <rect key="frame" x="109" y="165" width="157" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -173,4 +177,7 @@
             <point key="canvasLocation" x="1012" y="179.46026986506749"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo-white" width="293" height="155"/>
+    </resources>
 </document>
