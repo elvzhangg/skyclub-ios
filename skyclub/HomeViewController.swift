@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import Kingfisher
 
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -43,10 +43,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = users[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as! HeaderCell
+        let imageURL = URL(string: user.imageURL)
         
         cell.nameLabel.text = user.name
         cell.ageLabel.text = user.age
         cell.sexLabel.text = user.sex
+        cell.imageView?.kf.setImage(with: imageURL)
         
         
         return cell
