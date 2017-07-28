@@ -23,7 +23,7 @@ class EditYourInformationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.chosenImage = UIImage(named: "cloud logo")
+        self.chosenImage = UIImage(named: "selfie sample")
         profileImageView.image = chosenImage
         nextButton.layer.cornerRadius=6
         
