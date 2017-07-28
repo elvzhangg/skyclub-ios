@@ -14,6 +14,7 @@ class HeaderCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var sexLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
 
     
     override func awakeFromNib() {

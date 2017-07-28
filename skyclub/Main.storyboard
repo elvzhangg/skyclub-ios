@@ -134,6 +134,7 @@
                                         <connections>
                                             <outlet property="ageLabel" destination="A6N-uC-IGv" id="11q-7V-0nA"/>
                                             <outlet property="nameLabel" destination="za9-LH-AJ3" id="QWI-1K-48R"/>
+                                            <outlet property="profileImageView" destination="cQh-gM-LKO" id="pYa-li-sHl"/>
                                             <outlet property="sexLabel" destination="ugs-t4-Edf" id="tCC-JQ-YYY"/>
                                             <segue destination="8VC-zT-9Ny" kind="show" identifier="showDetail" id="GO9-he-5OG"/>
                                         </connections>
@@ -155,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="1157.5999999999999" y="226.23688155922042"/>
         </scene>
-        <!--Profile Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="swC-zs-05c">
             <objects>
-                <viewController id="8VC-zT-9Ny" customClass="ProfileController" customModule="skyclub" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8VC-zT-9Ny" customClass="ProfileViewController" customModule="skyclub" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oTV-Ew-NV1"/>
                         <viewControllerLayoutGuide type="bottom" id="6cz-KA-oRk"/>
