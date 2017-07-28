@@ -51,4 +51,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         return cell
     }
+    @IBAction func unwindProfileView(segue: UIStoryboardSegue) {
+        
+        print("unwindProfileView fired in firt view")
+        
+        if segue.source is ProfileController {
+            return
+        }
+        
+    }
+
 }
