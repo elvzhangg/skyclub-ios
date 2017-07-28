@@ -7,15 +7,23 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ProfileViewController: UIViewController {
 
     var user: User!
     
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameTextField: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        guard let url = URL.init(string: user.imageURL) else {
+            return
+        }
         // Do any additional setup after loading the view.
+        profileImageView?.kf.setImage(with: url)
+        
     }
 
     override func didReceiveMemoryWarning() {

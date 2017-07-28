@@ -13,7 +13,7 @@ target 'skyclub' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FirebaseUI/Facebook'
-  pod ‘Kingfisher’
+  pod 'Kingfisher'
 
 end
 
