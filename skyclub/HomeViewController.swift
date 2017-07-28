@@ -55,10 +55,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         print("unwindProfileView fired in firt view")
         
-        if segue.source is ProfileController {
-            return
-        }
-        
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.Segue.showDetail {
+            let detailVC = segue.destination as! ProfileViewController
+            let indexPath = tableView.indexPathForSelectedRow!
+            let selectedUser = users[indexPath.row]
+            detailVC.user = selectedUser
+        }
+    }
 }
