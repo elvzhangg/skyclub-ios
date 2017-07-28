@@ -13,14 +13,18 @@ import FirebaseDatabase
 
 class EditYourInformationViewController: UIViewController {
     
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var ageTextField: UITextField!
     @IBOutlet weak var sexTextField: UITextField!
     @IBOutlet weak var nextButton: UIButton!
     
+    var chosenImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.chosenImage = UIImage(named: "cloud logo")
+        profileImageView.image = chosenImage
         nextButton.layer.cornerRadius=6
         
     }
@@ -35,7 +39,7 @@ class EditYourInformationViewController: UIViewController {
         !sex.isEmpty
             else { return }
         
-        UserService.create(withUID: firUser.uid, name: name, sex: sex , age: age) { (user) in
+        UserService.create(withUID: firUser.uid, name: name, sex: sex , age: age, image: chosenImage!) { (user) in
             guard let user = user else {
                 // handle error
                 // TODO
@@ -49,20 +53,64 @@ class EditYourInformationViewController: UIViewController {
             self.view.window?.rootViewController = initialViewController
             self.view.window?.makeKeyAndVisible()
         }
-}
+    }
+    
+    func presentActionSheet() {
+        // 1
+        let alertController = UIAlertController(title: nil, message: "Where do you want to get your picture from?", preferredStyle: .actionSheet)
+        
+        // 2
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let capturePhotoAction = UIAlertAction(title: "Take Photo", style: .default, handler: { action in
+                self.presentImagePickerController(with: .camera)
+            })
+            
+            alertController.addAction(capturePhotoAction)
+        }
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let uploadAction = UIAlertAction(title: "Upload from Library", style: .default, handler: { action in
+                self.presentImagePickerController(with: .photoLibrary)
+            })
+            
+            alertController.addAction(uploadAction)
+        }
+        // 6
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        // 7
+        self.present(alertController, animated: true)
+    }
+
+    
+    func presentImagePickerController(with sourceType: UIImagePickerControllerSourceType) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = sourceType
+        imagePickerController.delegate = self
+        
+        self.present(imagePickerController, animated: true)
+    }
+    
+    @IBAction func editProfileImage(_ sender: Any) {
+        self.presentActionSheet()
+    }
+    
 }
 
-/*
-@IBAction func chooseImage(_ sender: Any) {
+extension EditYourInformationViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.profileImageView.image = selectedImage
+            self.chosenImage = selectedImage
+        }
+        
+        picker.dismiss(animated: true)
+    }
     
-    
-    let imagePickerController = UIImagePickerController()
-    imagePickerController.delegate = self.profileImageView as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
-    // Create UIAlertController
-    let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle: actionSheet)
-    // Camera Action displays UIImagePickerController.Camera
-    actionSheet.addAction(UIAlertAction(title: "Camera", style: default, handler: (action:UIAlertAction))
-    // Photo Library Action displays UIImagePickerController.PhotoLibrary
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true)
+    }
 }
-}
-*/
+
+

@@ -20,5 +20,6 @@ struct Constants {
         static let name = "name"
         static let age = "age"
         static let sex = "sex"
+        static let imageURL = "imageURL"
     }
 }

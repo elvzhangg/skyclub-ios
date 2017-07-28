@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OWr-4T-wbw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OWr-4T-wbw">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -131,10 +131,17 @@
                                     <action selector="nextButtonTapped:" destination="Wo7-LC-7T8" eventType="touchUpInside" id="5xN-RW-FO5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvf-6H-f7j">
-                                <rect key="frame" x="181" y="28" width="178" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add a profile photo +"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bjS-1g-PFW">
+                                <rect key="frame" x="141.5" y="15" width="92" height="92"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bjS-1g-PFW" secondAttribute="height" multiplier="1:1" id="9k3-8k-lH9"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWY-5o-NSW">
+                                <rect key="frame" x="141" y="15" width="92" height="92"/>
+                                <connections>
+                                    <action selector="editProfileImage:" destination="Wo7-LC-7T8" eventType="touchUpInside" id="EcS-Tp-v1T"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -147,28 +154,36 @@
                             <constraint firstItem="1ea-P2-fZQ" firstAttribute="top" secondItem="vXr-dT-gA9" secondAttribute="bottom" constant="8" id="GqS-6C-ZuS"/>
                             <constraint firstItem="U1u-5b-y0G" firstAttribute="top" secondItem="5LO-By-6lK" secondAttribute="bottom" constant="102" id="HJV-W4-rYw"/>
                             <constraint firstItem="1ea-P2-fZQ" firstAttribute="centerX" secondItem="9GH-XV-hvF" secondAttribute="centerX" id="HtW-Vv-ReZ"/>
+                            <constraint firstItem="gWY-5o-NSW" firstAttribute="centerX" secondItem="bjS-1g-PFW" secondAttribute="centerX" id="KbM-gF-nA6"/>
                             <constraint firstItem="mfE-f7-H0I" firstAttribute="top" secondItem="MOq-2u-OPh" secondAttribute="bottom" constant="28" id="LZe-jH-zdm"/>
                             <constraint firstItem="MOq-2u-OPh" firstAttribute="leading" secondItem="9GH-XV-hvF" secondAttribute="leading" constant="3" id="Mav-Xc-aZ2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vXr-dT-gA9" secondAttribute="trailing" constant="19" id="RjR-lC-vqq"/>
                             <constraint firstItem="vXr-dT-gA9" firstAttribute="leading" secondItem="9GH-XV-hvF" secondAttribute="leadingMargin" constant="19" id="T2R-qU-a51"/>
                             <constraint firstItem="MOq-2u-OPh" firstAttribute="top" secondItem="U1u-5b-y0G" secondAttribute="bottom" constant="16" id="Vgn-d6-Bd9"/>
                             <constraint firstAttribute="trailing" secondItem="MOq-2u-OPh" secondAttribute="trailing" constant="4" id="X4r-PH-msZ"/>
+                            <constraint firstItem="U1u-5b-y0G" firstAttribute="top" secondItem="bjS-1g-PFW" secondAttribute="bottom" constant="15" id="YrX-s4-Qin"/>
                             <constraint firstItem="mfE-f7-H0I" firstAttribute="centerX" secondItem="9GH-XV-hvF" secondAttribute="centerX" id="ab5-lX-LDb"/>
+                            <constraint firstItem="bjS-1g-PFW" firstAttribute="centerX" secondItem="9GH-XV-hvF" secondAttribute="centerX" id="bZR-DM-Swh"/>
                             <constraint firstItem="1ea-P2-fZQ" firstAttribute="leading" secondItem="9GH-XV-hvF" secondAttribute="leadingMargin" constant="19" id="cIx-uw-QHq"/>
+                            <constraint firstItem="gWY-5o-NSW" firstAttribute="centerY" secondItem="bjS-1g-PFW" secondAttribute="centerY" id="ccg-7C-shw"/>
                             <constraint firstItem="vXr-dT-gA9" firstAttribute="centerX" secondItem="9GH-XV-hvF" secondAttribute="centerX" id="e9y-Zd-QoU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mfE-f7-H0I" secondAttribute="trailing" constant="19" id="eU0-3Q-MYa"/>
                             <constraint firstItem="vXr-dT-gA9" firstAttribute="top" secondItem="mfE-f7-H0I" secondAttribute="bottom" constant="8" id="gwu-80-C7F"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1ea-P2-fZQ" secondAttribute="trailing" constant="19" id="jVZ-5u-Els"/>
                             <constraint firstItem="U1u-5b-y0G" firstAttribute="leading" secondItem="9GH-XV-hvF" secondAttribute="leadingMargin" constant="64.5" id="kN7-dg-MLb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="U1u-5b-y0G" secondAttribute="trailing" constant="64.5" id="pbu-Ei-zXY"/>
+                            <constraint firstItem="gWY-5o-NSW" firstAttribute="width" secondItem="bjS-1g-PFW" secondAttribute="width" id="rVj-6S-EyW"/>
+                            <constraint firstItem="bjS-1g-PFW" firstAttribute="top" secondItem="9GH-XV-hvF" secondAttribute="topMargin" constant="15" id="sjJ-FE-7Tb"/>
                             <constraint firstItem="U1u-5b-y0G" firstAttribute="centerX" secondItem="9GH-XV-hvF" secondAttribute="centerX" id="t18-zm-he5"/>
                             <constraint firstItem="mfE-f7-H0I" firstAttribute="leading" secondItem="9GH-XV-hvF" secondAttribute="leadingMargin" constant="19" id="vMe-oK-dSa"/>
+                            <constraint firstItem="gWY-5o-NSW" firstAttribute="height" secondItem="bjS-1g-PFW" secondAttribute="height" id="w3X-j9-Ybz"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ageTextField" destination="vXr-dT-gA9" id="fUG-lI-Knf"/>
                         <outlet property="nameTextField" destination="mfE-f7-H0I" id="VJW-nl-ZOZ"/>
                         <outlet property="nextButton" destination="4Vr-pg-HkL" id="u9e-ii-8wp"/>
+                        <outlet property="profileImageView" destination="bjS-1g-PFW" id="ftu-bU-seu"/>
                         <outlet property="sexTextField" destination="1ea-P2-fZQ" id="4z8-dJ-tha"/>
                     </connections>
                 </viewController>

@@ -50,22 +50,25 @@ class User: NSObject {
     let name: String
     let age: String
     let sex: String
+    let imageURL: String
     
     var dictValue: [String: String] {
         let dict = [Constants.UserDefaults.name: name,
                     Constants.UserDefaults.age: age,
-                    Constants.UserDefaults.sex: sex]
+                    Constants.UserDefaults.sex: sex,
+                    Constants.UserDefaults.imageURL: imageURL]
         return dict
     }
     
     
     // MARK: - Init
     
-    init(uid: String, name: String, sex: String, age: String) {
+    init(uid: String, name: String, sex: String, age: String, imageURL: String) {
         self.uid = uid
         self.name = name
         self.age = age
         self.sex = sex
+        self.imageURL = imageURL
         super.init()
     }
     
@@ -75,7 +78,9 @@ class User: NSObject {
         guard let dict = snapshot.value as? [String: String],
             let age = dict[Constants.UserDefaults.age],
             let sex = dict[Constants.UserDefaults.sex],
-            let name = dict[Constants.UserDefaults.name] else {
+            let name = dict[Constants.UserDefaults.name],
+            let imageURL = dict[Constants.UserDefaults.imageURL]
+        else {
                 return nil
         }
         
@@ -83,6 +88,7 @@ class User: NSObject {
         self.age = age
         self.name = name
         self.sex = sex
+        self.imageURL = imageURL
     }
 
     // init with aCoder
@@ -90,12 +96,14 @@ class User: NSObject {
         guard let uid = aDecoder.decodeObject(forKey: Constants.UserDefaults.uid) as? String,
             let name = aDecoder.decodeObject(forKey: Constants.UserDefaults.name) as? String,
             let age = aDecoder.decodeObject(forKey: Constants.UserDefaults.age) as? String,
-            let sex = aDecoder.decodeObject(forKey: Constants.UserDefaults.sex) as? String
+            let sex = aDecoder.decodeObject(forKey: Constants.UserDefaults.sex) as? String,
+            let imageURL = aDecoder.decodeObject(forKey: Constants.UserDefaults.imageURL) as? String
             else {return nil}
         self.uid = uid
         self.name = name
         self.age = age
         self.sex = sex
+        self.imageURL = imageURL
         super.init()
     }
 }
@@ -106,6 +114,7 @@ extension User: NSCoding {
         aCoder.encode(name, forKey: Constants.UserDefaults.name)
         aCoder.encode(age, forKey: Constants.UserDefaults.age)
         aCoder.encode(sex, forKey: Constants.UserDefaults.sex)
+        aCoder.encode(imageURL, forKey: Constants.UserDefaults.imageURL)
     }
 }
 

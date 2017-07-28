@@ -1,5 +1,5 @@
 //
-//  Pictures.swift
+//  StorageService.swift
 //  skyclub
 //
 //  Created by Louis on 2017/7/28.
@@ -11,16 +11,18 @@ import UIKit
 import FirebaseStorage
 
 struct StorageService {
-    static func uploadImage(_ image: UIImage, at reference: StorageReference, completion: @escaping (URL?)-> Void) {
-        guard let imageData = UIImageJPEGRepresentation(image, 0.1) else {
-            return completion(nil)
+    static func uploadImage(_ image: UIImage, at reference: StorageReference, completion: @escaping (URL?) -> Void) {
+        guard let imageData = UIImageJPEGRepresentation(image, 0.1)
+            else {
+                return completion(nil)
         }
-        reference.putData(imageData, metadata: nil, completion: {(metadata, error) in
+        reference.putData(imageData, metadata: nil, completion: {
+            (metadata, error) in
             if let error = error {
                 assertionFailure(error.localizedDescription)
-                return completion(nil)
+                return completion (nil)
             }
-            completion(metadata?.downloadURL())
+            completion(metadata?.downloadURL() )
         })
-}
+    }
 }
