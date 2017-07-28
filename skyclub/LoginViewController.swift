@@ -15,9 +15,23 @@ import FirebaseDatabase
 typealias FIRUser = FirebaseAuth.User
 
 class LoginViewController: UIViewController, FUIAuthDelegate {
-
-    @IBAction func loginFacebook(_ sender: UIButton) {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
+        let topColor = UIColor(red: 66/225.0, green: 72/225.0, blue: 248/225.0, alpha: 1)
+        let bottomColor = UIColor(red: 206/225.0, green: 102/225.0, blue: 240/225.0, alpha: 1)
+        
+        let gradientColors: [CGColor] = [topColor.cgColor, bottomColor.cgColor]
+        
+        let gradientLayer: CAGradientLayer = CAGradientLayer()
+        gradientLayer.colors = gradientColors
+        
+        
+        gradientLayer.frame = self.view.bounds
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    @IBAction func loginFacebook(_ sender: UIButton) {
         
         guard let authUI = FUIAuth.defaultAuthUI()
             else { return }

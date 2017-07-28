@@ -51,3 +51,18 @@ class EditYourInformationViewController: UIViewController {
         }
 }
 }
+
+/*
+@IBAction func chooseImage(_ sender: Any) {
+    
+    
+    let imagePickerController = UIImagePickerController()
+    imagePickerController.delegate = self.profileImageView as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+    // Create UIAlertController
+    let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle: actionSheet)
+    // Camera Action displays UIImagePickerController.Camera
+    actionSheet.addAction(UIAlertAction(title: "Camera", style: default, handler: (action:UIAlertAction))
+    // Photo Library Action displays UIImagePickerController.PhotoLibrary
+}
+}
+*/

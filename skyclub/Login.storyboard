@@ -23,15 +23,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJ1-1L-Zj1">
-                                <rect key="frame" x="55.5" y="446" width="264" height="51"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJ1-1L-Zj1">
+                                <rect key="frame" x="55" y="411" width="264" height="51"/>
+                                <color key="backgroundColor" red="0.44753667712211609" green="0.65312761068344116" blue="0.90592765808105469" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="OhY-M8-c0v"/>
+                                    <constraint firstAttribute="height" constant="51" id="OhY-M8-c0v" userLabel="height = 44"/>
                                     <constraint firstAttribute="width" constant="264" id="iHb-Lh-agK"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="LOGIN WITH FACEBOOK">
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="Login with Facebook">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -39,10 +39,10 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="lCc-jg-MW2" firstAttribute="top" secondItem="VJ1-1L-Zj1" secondAttribute="bottom" constant="205" id="NJd-3k-t94"/>
                             <constraint firstItem="VJ1-1L-Zj1" firstAttribute="centerX" secondItem="ARi-0a-Bze" secondAttribute="centerX" id="Vd1-ej-1YO"/>
-                            <constraint firstItem="lCc-jg-MW2" firstAttribute="top" secondItem="VJ1-1L-Zj1" secondAttribute="bottom" constant="170" id="xvi-hV-ZeF"/>
                         </constraints>
                     </view>
                     <connections>
@@ -126,6 +126,11 @@
                                 <connections>
                                     <action selector="nextButtonTapped:" destination="Wo7-LC-7T8" eventType="touchUpInside" id="5xN-RW-FO5"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvf-6H-f7j">
+                                <rect key="frame" x="181" y="28" width="178" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add a profile photo +"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

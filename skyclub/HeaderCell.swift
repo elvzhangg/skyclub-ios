@@ -22,3 +22,17 @@ class HeaderCell: UITableViewCell {
     
 }
 
+/* let imageURL: String
+ let imageHeight: CGFloat
+ 
+ init(imageURL: String, imageHeight: CGFloat){
+ self.imageURL = imageURL
+ self.imageHeight = imageHeight
+ 
+ 
+ }
+ 
+ required init?(coder aDecoder: NSCoder) {
+ fatalError("init(coder:) has not been implemented")
+ }
+ */
