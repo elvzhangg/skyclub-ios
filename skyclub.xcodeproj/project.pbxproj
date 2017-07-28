@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A2ACDCA1F2595BC0058AFEA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2ACDC91F2595BC0058AFEA /* AppDelegate.swift */; };
 		2A2ACDD11F2595BC0058AFEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2ACDD01F2595BC0058AFEA /* Assets.xcassets */; };
+		2A789EF21F2AEB0800FF1870 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A789EF11F2AEB0800FF1870 /* LaunchScreenViewController.swift */; };
 		2AA5897D1F26F0EE007480AB /* FlightInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5897C1F26F0EE007480AB /* FlightInfoController.swift */; };
 		2AA5899D1F2986EF007480AB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5899C1F2986EF007480AB /* HomeViewController.swift */; };
 		2AA5899F1F298DFD007480AB /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA5899E1F298DFD007480AB /* HeaderCell.swift */; };
@@ -31,6 +32,7 @@
 		2A2ACDC61F2595BC0058AFEA /* skyclub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = skyclub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A2ACDC91F2595BC0058AFEA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A2ACDD01F2595BC0058AFEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2A789EF11F2AEB0800FF1870 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		2AA5897C1F26F0EE007480AB /* FlightInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlightInfoController.swift; sourceTree = "<group>"; };
 		2AA5899C1F2986EF007480AB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2AA5899E1F298DFD007480AB /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
@@ -111,9 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				50195D271F2719B200F8E3D7 /* EditYourInformationViewController.swift */,
-				501EB8B11F25CA08000D17F2 /* LoginViewController.swift */,
-				2AA5897C1F26F0EE007480AB /* FlightInfoController.swift */,
 				2AA5899C1F2986EF007480AB /* HomeViewController.swift */,
+				2AA5897C1F26F0EE007480AB /* FlightInfoController.swift */,
+				501EB8B11F25CA08000D17F2 /* LoginViewController.swift */,
+				2A789EF11F2AEB0800FF1870 /* LaunchScreenViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				2AA5899D1F2986EF007480AB /* HomeViewController.swift in Sources */,
 				50195D281F2719B200F8E3D7 /* EditYourInformationViewController.swift in Sources */,
 				2A2ACDCA1F2595BC0058AFEA /* AppDelegate.swift in Sources */,
+				2A789EF21F2AEB0800FF1870 /* LaunchScreenViewController.swift in Sources */,
 				50195D261F27175200F8E3D7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
