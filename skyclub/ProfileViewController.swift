@@ -15,6 +15,8 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameTextField: UILabel!
+    @IBOutlet weak var ageTextField: UILabel!
+    @IBOutlet weak var sexTextField: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +25,13 @@ class ProfileViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
         profileImageView?.kf.setImage(with: url)
+        
+        let imageURL = URL(string: user.imageURL)
+        
+        nameTextField.text = user.name
+        ageTextField.text = user.age
+        sexTextField.text = user.sex
+
         
     }
 
